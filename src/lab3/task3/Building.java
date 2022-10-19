@@ -18,6 +18,7 @@ public class Building {
         System.out.println("Дом: "+floor+"-этажный, "+name+", "+year +" год, возраст здания - "+getDate() );
 
     }
+    // метод принимает тек год и год постройки
 public int getDate ()
 {
     return 2022-year;

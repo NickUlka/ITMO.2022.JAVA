@@ -18,6 +18,7 @@ public Car (){
         System.out.println("Автомобиль:"+ color+ ", "+brand+ ", "+weight + " тн");
     }
 }
+//get set
 class JavaProgram {
     public static void main(String[] args) {
      Car car1=new Car();

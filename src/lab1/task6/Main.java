@@ -21,6 +21,7 @@ public class Main {
             case (1):
                 System.out.println("Нечетное");
                 break;
+                //if else
         }
     }
 }
