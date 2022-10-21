@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args)
     {
       int number = 10500;
-      //double
-      int result = number/10/10;
+
+      double result = number/10d/10;
         System.out.println(result);
     }
 }

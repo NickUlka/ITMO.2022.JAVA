@@ -1,9 +1,12 @@
 package lab3.task3;
 
+import java.util.Scanner;
+
 public class Building {
    private int floor;
     private int year;
     private String name;
+    private  int nowYear;
 
 
 
@@ -14,14 +17,14 @@ public class Building {
         this.floor=floor;
     }
 
-    public void display (){
-        System.out.println("Дом: "+floor+"-этажный, "+name+", "+year +" год, возраст здания - "+getDate() );
+    public void display (int nowYear){
+        System.out.println("Дом: "+floor+"-этажный, "+name+", "+year +" год, возраст здания - "+getDate(nowYear) );
 
     }
-    // метод принимает тек год и год постройки
-public int getDate ()
+
+public int getDate (int nowYear)
 {
-    return 2022-year;
+    return nowYear-year;
 }
 }
 
@@ -31,6 +34,9 @@ Building building1 = new Building();
             Building building2 = new Building();
             building1.setBuilding(3,"школа", 1985);
             building2.setBuilding(17,"жилой дом", 2020);
-            building1.display();
-            building2.display();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Введите текущий год: ");
+            int i = scanner.nextInt();
+            building1.display(i);
+            building2.display(i);
 }}
