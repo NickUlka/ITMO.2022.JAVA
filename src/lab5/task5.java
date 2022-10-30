@@ -2,11 +2,19 @@ package lab5;
 
 public class task5 {
     public static void main(String[] args) {
-        reverseText("Как прекрасен этот мир");
+        System.out.println(reverseText("Как прекрасен этот мир"));
     }
-    public static void reverseText (String word) {
-        String stringRev = new StringBuilder(word).reverse().toString();
-       System.out.println(stringRev);
+
+
+    public static String reverseText(String text) {
+        String[] strings = text.split(" ");
+        String result = "";
+        for (String word : strings) {
+            StringBuilder stringRev = new StringBuilder(word).reverse();
+            stringRev.append(" ");
+            result += stringRev.toString();
+        }
+        return result.trim();
     }
 }
 

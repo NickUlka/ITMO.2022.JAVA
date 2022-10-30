@@ -11,13 +11,13 @@ public class task6 {
 
 
     public static boolean oneThreeConsistsOf(int[] array) {
-        boolean isTrue = false;
+        boolean isContains = false;
         for (int j : array) {
             if (j == 1 || j == 3) {
-                isTrue = true;
+                isContains = true;
                 break;
             }
         }
-        return isTrue;
+        return isContains;
     }
 }

@@ -13,12 +13,13 @@ public class task3 {
         int num3 = scanner.nextInt();
 
         if (sumEqual(num1,num2,num3)){
-            System.out.print("\nРезультат: " + (sumEqual(num1,num2,num3)));
+            System.out.print("\nСумма двух чисел равно третьему числу: " + (sumEqual(num1,num2,num3)));
         }
+        else { System.out.print("\nСумма двух чисел равно третьему числу: " + (sumEqual(num1,num2,num3)));}
     }
     public static boolean  sumEqual (int num1, int num2, int num3)
     {
-        int sum=num1+num2;
-        return sum==num3;
+
+        return num1+num2==num3;
     }
 }
