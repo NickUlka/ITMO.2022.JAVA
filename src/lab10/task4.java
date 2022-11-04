@@ -15,7 +15,7 @@ replaceInFile(string);
     }
 
     static void replaceInFile(String string) {
-        String search = "[^\\\\da-zA-Zа-яёА-ЯЁ0-9 ]";
+        String search = "[^a-zA-Zа-яёА-ЯЁ0-9 ]";
         String replace = "\\$";
         Charset charset = StandardCharsets.UTF_8;
         Path path = Paths.get(string);
