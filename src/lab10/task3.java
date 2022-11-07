@@ -20,9 +20,8 @@ writeString(stringFromFile(fileInput));
 
     static String stringFromFile(String string) {
         String stringReader="";
-        try {
-            File file = new File(string);
-            BufferedReader reader = new BufferedReader(new FileReader(file));
+        File file = new File(string);
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))){
             stringReader = reader.readLine();
         } catch (IOException e) {
             System.err.println(e.getMessage());

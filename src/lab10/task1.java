@@ -15,9 +15,8 @@ List<String> list = stringListFromFile(file);
 
     static List<String> stringListFromFile(String string) {
         List<String> strings = new LinkedList<>();
-        try {
-            File file = new File(string);
-            BufferedReader reader = new BufferedReader(new FileReader(file));
+        File file = new File(string);
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String input = reader.readLine();
             while (input != null) {
               strings.add(input);
